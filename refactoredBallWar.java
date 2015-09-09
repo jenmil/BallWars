@@ -10,16 +10,20 @@ public class Ball
 	int horizontalScreenSize;
 	int verticalScreenSize;
 	
-	public Ball(int newMaxHorizontalSpeed, int newMaxVerticalSpeed, int newHorizontalScreenSize, int newVerticalScreenSize)
-	{ 
+	public Ball(int newMaxHorizontalSpeed, int newMaxVerticalSpeed, int newHorizontalScreenSize, int newVerticalScreenSize){ 
 		horizontalScreenSize = newHorizontalScreenSize;
 		verticalScreenSize = newVerticalScreenSize;
 		maxHorizontalSpeed = newMaxHorizontalSpeed;
 		maxVerticalSpeed = newMaxVerticalSpeed;
-		ballHorizontalDirection = maxHorizontalSpeed;
-		ballVerticalDirection = maxVerticalSpeed;
 		
+		setBallDirection();
 		positionBall(320, 240);
+	}
+	
+	private void setBallDirection() {
+	
+		ballHorizontalDirection = maxHorizontalSpeed;
+		ballVerticalDirection = maxVerticalSpeed;	
 	}
 
 	public void positionBall(int newBallHorizontalPosition, int newBallVerticalPosition)
